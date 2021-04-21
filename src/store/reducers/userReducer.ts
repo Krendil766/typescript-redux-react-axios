@@ -1,4 +1,4 @@
-import {UserState, UserActioan, UserActioanTypes} from '../../types/users'
+import { UserState, UserActioan, UserActioanTypes } from "../../types/users";
 
 const initialState: UserState = {
   users: [],
@@ -28,8 +28,9 @@ const userReducer = (
         loading: false,
         error: action.payload,
       };
+    default:
+      return state;
   }
-  return state;
 };
 
 export default userReducer;
